@@ -1,0 +1,188 @@
+<tool id="ID_hide" name="Title" version="1.0.0">
+  <description>
+        description in the left menu
+  </description>
+  <command interpreter="perl">
+         _main.pl -input $input -arg1 $arg1 -output $output
+  </command>
+  <inputs>
+        <param name="input" label="parameter's title " format="txt" type="data" />
+        <param name="arg1" type="select" display="checkboxes" multiple="True" label="parameter's title " help="help text">
+                <option value="name_opt1">Name option</option>
+                <option value="name_opt2">Name option other</option>
+        </param>
+        <param name="arg2" label="parameter 2 title " type="select" display="radio" help="help text">
+			<option value="tab" selected="True">tabulation</option>
+			<option value="space">space</option>
+			<option value="_">_</option>
+		</param>
+  </inputs>
+  <outputs>
+    <data name="output" format="txt" label="Output's title"/>
+  </outputs>
+
+  <help>
+
+.. class:: infomark
+
+**Authors** First-name Name someone@somewhere.com
+
+---------------------------------------------------
+
+.. class:: infomark
+
+**Please cite** If you use this tool, please cite `Author pub. Title and other. This is a bogus link &lt;http://www.ncbi.nlm.nih.gov/pubmed/23286517&gt;`_
+
+---------------------------------------------------
+
+==============
+Tool Name
+==============
+
+-----------
+Description
+-----------
+
+ | Description of the tool in 1 lines
+ | or 2 lines
+
+
+-----------------
+Workflow position
+-----------------
+
+**Upstream tools**
+
++--------+-------------+---------+--------------+
+| Name   | Output file | Format  | Parameter    |
++========+=============+=========+==============+
+| tool 1 | outFile.tab | tabular | param name 1 |
++--------+-------------+---------+--------------+
+| tool 2 | outFile.csv | csv     | param name 2 |
++--------+-------------+---------+--------------+
+
+
+**Downstream tools**
+
++--------+-------------+---------+----------+
+| Name   | output file | format  | comments |
++========+=============+=========+==========+
+| tool 3 | outFile.tab | tabular |          |
++--------+-------------+---------+----------+
+| tool 4 | - file1.csv | - csv   |          |
+|        | - fil2.Rdat | - Rdata |          |
++--------+-------------+---------+----------+
+
+
+.. image:: ./static/images/metabolomics/Workflow_position/this_tools.png
+        :width: 800
+        
+
+-----------
+Input files
+-----------
+
++-------------------------+-----------+
+| Parameter : num + label |  Format   |
++=========================+===========+
+| 1 : file1.tab           |  tabular  |
++-------------------------+-----------+
+| 2 : file2.csv           |   csv     |
++-------------------------+-----------+
+
+Constraints files : 
+	* column 1 : description
+	* column 5 : description
+
+
+----------
+Parameters
+----------
+
+parameter1
+	Parameter 1 description
+
+parameter2longer
+	| Parameter 2 description
+	| on 2 lines if needed
+
+
+------------
+Output files
+------------
+
+output.tab
+	| File description
+	| You can continue your analysis with the tool retcor or fillPeaks
+
+outFile.csv
+	File description
+
+	
+---------------------------------------------------
+
+---------------
+Working example
+---------------
+
+
+.. class:: warningmark
+
+Soon see the corresponding "Page"
+
+
+Input files
+===========
+
+| **These input files can be used in the purview "URL/Text:" of the tool "Get Data/Upload File",**
+| **by checking the box "Convert spaces to tabs: YES"**
+
+file1.txt
+	Model input file::
+	
+		colonne1 colonne2 col3 etc
+		element1.1 element1.2 el1.3 ...
+		element2.1 elem2.2 el1.3 ...
+		elem3.1 3.2 el1.3 ...
+
+		
+Parameters
+==========
+
+Parameter 1  -> **content**
+
+Parameter 2  -> **content**
+
+
+Output files
+============
+
+output.pdf
+
+.. image:: ./static/images/output.png
+        :width: 500
+        :height: 400
+	
+
+output.txt
+
+========== ========== ===== ===
+colonne1   colonne 2  col3  etc
+========== ========== ===== ===
+element1.1 element1.2 el1.3 ...
+element2.1 elem 2.2   el1.3 ...
+elem3.1       3.2     el1.3 ...
+========== ========== ===== ===
+
+
+output.other::
+	Something
+	
+---------------------------------------------------
+
+.. class:: infomark
+
+More information about formatting can be found here: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+
+	</help>
+</tool>
